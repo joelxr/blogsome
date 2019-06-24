@@ -1,0 +1,173 @@
+$black: #22292f;
+$white: #fff;
+
+$gray-lightest: #f8fafc;
+$gray-lighter: #f1f5f8;
+$gray-light: #dae1e7;
+$gray-base: #b8c2cc;
+$gray-dark: #8795a1;
+$gray-darker: #606f7b;
+$gray-darkest: #3d4852;
+
+$teal-lightest: #e8fffe;
+$teal-lighter: #a0f0ed;
+$teal-light: #64d5ca;
+$teal-base: #4dc0b5;
+$teal-dark: #38a89d;
+$teal-darker: #20504f;
+$teal-darkest: #0d3331;
+
+$red-lightest: #fcebea;
+$red-lighter: #f9acaa;
+$red-light: #ef5753;
+$red-base: #e3342f;
+$red-dark: #cc1f1a;
+$red-darker: #621b18;
+$red-darkest: #3b0d0c;
+
+$blue-lightest: #eff8ff;
+$blue-lighter: #bcdefa;
+$blue-light: #6cb2eb;
+$blue-base: #3490dc;
+$blue-dark: #2779bd;
+$blue-darker: #0747a6;
+$blue-darkest: #063d8e;
+
+$orange-lightest: #fff5eb;
+$orange-lighter: #fcd9b6;
+$orange-light: #faad63;
+$orange-base: #f6993f;
+$orange-dark: #de751f;
+$orange-darker: #613b1f;
+$orange-darkest: #462a16;
+
+$yellow-lightest: #fcfbeb;
+$yellow-lighter: #fff9c2;
+$yellow-light: #fff382;
+$yellow-base: #ffed4a;
+$yellow-dark: #f2d024;
+$yellow-darker: #684f1d;
+$yellow-darkest: #453411;
+
+$green-lightest: #e3fcec;
+$green-lighter: #a2f5bf;
+$green-light: #51d88a;
+$green-base: #38c172;
+$green-dark: #1f9d55;
+$green-darker: #1a4731;
+$green-darkest: #0f2f21;
+
+$purple-lightest: #f3ebff;
+$purple-lighter: #d6bbfc;
+$purple-light: #a779e9;
+$purple-base: #9561e2;
+$purple-dark: #794acf;
+$purple-darker: #382b5f;
+$purple-darkest: #21183c;
+
+$pink-lightest: #ffebef;
+$pink-lighter: #ffbbca;
+$pink-light: #fa7ea8;
+$pink-base: #f66d9b;
+$pink-dark: #eb5286;
+$pink-darker: #6f213f;
+$pink-darkest: #451225;
+
+$gray: (
+  l3: $gray-lightest,
+  l2: $gray-lighter,
+  l1: $gray-light,
+  b: $gray-base,
+  d1: $gray-dark,
+  d2: $gray-darker,
+  d3: $gray-darkest
+);
+
+$teal: (
+  l3: $teal-lightest,
+  l2: $teal-lighter,
+  l1: $teal-light,
+  b: $teal-base,
+  d1: $teal-dark,
+  d2: $teal-darker,
+  d3: $teal-darkest
+);
+
+$red: (
+  l3: $red-lightest,
+  l2: $red-lighter,
+  l1: $red-light,
+  b: $red-base,
+  d1: $red-dark,
+  d2: $red-darker,
+  d3: $red-darkest
+);
+
+$orange: (
+  l3: $orange-lightest,
+  l2: $orange-lighter,
+  l1: $orange-light,
+  b: $orange-base,
+  d1: $orange-dark,
+  d2: $orange-darker,
+  d3: $orange-darkest
+);
+
+$blue: (
+  l3: $blue-lightest,
+  l2: $blue-lighter,
+  l1: $blue-light,
+  b: $blue-base,
+  d1: $blue-dark,
+  d2: $blue-darker,
+  d3: $blue-darkest
+);
+
+$yellow: (
+  l3: $yellow-lightest,
+  l2: $yellow-lighter,
+  l1: $yellow-light,
+  b: $yellow-base,
+  d1: $yellow-dark,
+  d2: $yellow-darker,
+  d3: $yellow-darkest
+);
+
+$green: (
+  l3: $green-lightest,
+  l2: $green-lighter,
+  l1: $green-light,
+  b: $green-base,
+  d1: $green-dark,
+  d2: $green-darker,
+  d3: $green-darkest
+);
+
+$purple: (
+  l3: $purple-lightest,
+  l2: $purple-lighter,
+  l1: $purple-light,
+  b: $purple-base,
+  d1: $purple-dark,
+  d2: $purple-darker,
+  d3: $purple-darkest
+);
+
+$pink: (
+  l3: $pink-lightest,
+  l2: $pink-lighter,
+  l1: $pink-light,
+  b: $pink-base,
+  d1: $pink-dark,
+  d2: $pink-darker,
+  d3: $pink-darkest
+);
+
+// CONTENT
+$color-body-bg: $gray-lightest;
+$color-text: $black;
+$color-heading-text: $teal-base;
+
+// LINKS
+$color-link-text: $teal-base;
+$color-link-text-active: $color-text;
