@@ -68,7 +68,7 @@ export default {
   .title {
     @extend %typography-xxlarge;
 
-    justify-self: center;
+    justify-self: flex-start;
     
     a {
       color: $black;

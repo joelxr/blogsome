@@ -1,0 +1,115 @@
+---
+layout: post
+title:  (Cypress) Testes automáticos Parte 0
+date:   2018-11-23 08:00:00 -0300
+categories: cypress
+resumo: Cypress na prática, parte 0.
+---
+<section>
+  <h1>Introdução</h1>
+  <div class="columns">
+    <div class="column is-three-fifths">
+      <section>
+        <h2>O que é?</h2>
+        <p>
+        <em>Cypress</em> é uma ferramenta para testar aplicações WEB modernas, pode ser utilizado para testes <em>end-to-end</em>, de integração e unitários.
+        Ele pode testar tudo que roda no browser, é um motor de testes livre, de <a href="https://github.com/cypress-io/cypress" target="blank">código aberto</a>, localmente instalado, com um serviço de <em>dashboard</em> e recursos para gravação dos seus testes.
+        Com ele, você pode, facilmente, implementar seus testes todos os dias a medida que sua aplicação é desenvolvida. TDD é possível!
+        Junto com um serviço de integração contínua (CI) ele pode gravar e capturar a tela durante os testes, e você nunca mais vai se perguntar: <em>"O que será que deu errado?"</em>
+        </p>
+      </section>
+      <section>
+        <h2>Funcionalidades</h2>
+        <p>
+        <ul>
+          <li><strong>Viajar no tempo</strong>: existe a possibilidade de observar, isoladamente, a aplicação em cada passo do caso de teste, basta passar o mouse em cima da instrução e ao lado a aplicação volta no tempo e lhe mostra o que estava acontecendo nesse momento. </li>
+          <li><strong>Debug</strong>: as ferramentas do desenvolvedor do seu navegador são compatíveis e, com elas, você pode debugar o código durante a execução.</li>
+          <li><strong>Espera automática</strong>: nunca adicione tempo de espera nos testes, nos comandos e assertivas dos testes sempre haverá um tempo de espera padrão antes de seguir em frente.</li>
+          <li><strong><em>Stubs</em>, <em>Spies</em> e <em>Clocks</em></strong>: é possivel controlar o retorno para os seus objetos da mesma forma como é feito nos testes unitários.</li>
+          <li><strong><em>Stubs</em> das requisições</strong>: você pode configurar o Cypress para retornar e acessar exatamente o que você quer diante de uma requisição.</li>
+          <li><strong>Resultados consistentes</strong>: não utiliza Selenium ou WebDriver, é mais rápido, estável e por isso confiável. </li>
+          <li><strong>Grava vídeos e captura a tela</strong> a cada teste executado.</li>
+        </ul>
+        </p>
+      </section>
+      <section>
+        <h2>Motivação</h2>
+        <p>
+          No geral, o Cypress é uma ferramenta que nos permite automatizar testes.
+          Contudo, testes automatizados não são uma uma novidade, o Selenium já faz isso e existe há bastante tempo.
+          Mas, da mesma forma que é comum surgir formas e versões melhores e mais robustas com correções e evoluções das bibliotecas e ferramentas que utilizamos para escrever software, o mesmo vale para as ferramentas de testes, embora, a sensação que se tem, é que que essa área não recebe a devida atenção e isso acontece com bem menos frequência.
+        </p>
+        <p>
+          Escrever testes deve estar na rotina dos desenvolvedores e testadores, imagine que você tem uma tarefa a fazer, e existe a opção de escrevê-la uma vez e garantir que toda vez que você precise dela, o máximo de esforço que você fará é rodar um comando em vez de fazer você mesmo  cada passo dela.
+        </p>
+        <p>
+          Podemos fazer uma analogia com os números armazenados em uma agenda de celular.
+          Vamos supor que você deseja fazer uma ligação, e vamos considerar cada número digitado no teclado com uma operação.
+          Então, para ligar para alguém, você deve ir ao teclado e pressionar, por exemplo: nove, nove, sete, seis, três, dois, zero e assim vai até que, finalmente, você pressione o botão de chamar e então sua tarefa acabou.
+          A questão é: Quem faz isso? As agendas existem para você armazenar cada conjunto de cada "operação" necessária para uma ligação dessas.
+          Um número de telefone, nessa analogia, seriam todas as operações para ligar para o Yuri ou a Bia ou o Eduardo, eles seriam os seus casos de teste. 
+          É maluco pensar que há quem prefira digitar os mesmos números toda vida para falar com um certo grupo de pessoas.
+        </p>
+        <p>
+          O mesmo vale para testes de software, você terá que testar a mesmas coisas com frequência, por que não escrevê-las uma vez e executá-las sempre? E por que não utilizar uma ferramenta como o Cypress?
+        </p>
+      </section>
+    </div>
+    <div class="column">
+      <section>
+        <article class="message">
+          <div class="message-header">
+            Testes de integração
+          </div>
+          <div class="message-body">
+            <p>
+            Teste que envolve partes combinadas de uma aplicação para determinar se juntas funcionam corretamente.
+            Essas "partes" podem ser módulos de código, aplicações individuais ou uma aplicação cliente/servidor em um servidor. Esse tipo de teste é bastante relevante em aplicações do tipo cliente/servidor e aplicações distribuídas.<sup>2</sup>
+            </p>
+          </div>
+        </article>
+        <article class="message">
+          <div class="message-header">
+            Testes unitários
+          </div>
+          <div class="message-body">
+            <p>
+            O de escala mais "micro" dos testes; para testar específicas funções ou módulos.
+            Geralmente, feito por programadores e não testadores, por requerer conhecimento detalhado do código e arquitetura da aplicação. Nem sempre é feito facilmente, a não ser que a aplicação uma boa arquitetura que permita.<sup>2</sup>
+            </p>
+          </div>
+        </article>
+        <article class="message">
+          <div class="message-header">
+            Testes E2E
+          </div>
+          <div class="message-body">
+            <p>
+            Envolve testar completamente o que envolve a aplicação, todo o seu ambiente em uma dada situação que imita um cenário real, como interações com um banco de dados, módulos distribuídos através da rede, interfaces de hardware, outras aplicações e sistemas.<sup>2</sup>
+            </p>
+          </div>
+        </article>
+        <article class="message">
+          <div class="message-header">
+            TDD
+          </div>
+          <div class="message-body">
+            <p>
+            Do inglês <em><strong>T</strong>est-<strong>d</strong>riven <strong>D</strong>evelopment</em>, o TDD é a metodologia que envolve desenvolver uma aplicação em ciclos que comecem pelos casos de testes e depois pelo código-fonte.<sup>3</sup>
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</section>
+<section>
+  <h1>Referências</h1>
+  <ol>
+    <li><a href="https://docs.cypress.io/guides/overview/why-cypress.html" target="blank">Guia oficial do Cypress.</a></li>
+    <li>William E. Lewis, Software Testing and Continuous Quality Improvement (2016), p47.</li>
+    <li>Kent Beck, Test-Driven Development by Example (2003)</li>
+  </ol>
+</section>
+
+

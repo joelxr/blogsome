@@ -411,7 +411,7 @@ $typography-line-heights-contrast: (
 %typography-large {
   @include typography-got-rhythm(1);
 
-  @extend %font-heading;
+  @extend %font-content;
 }
 
 %typography-medium {

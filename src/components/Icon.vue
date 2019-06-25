@@ -10,6 +10,7 @@ fontAwesomeIconLibrary.add(
   require('@fortawesome/free-solid-svg-icons/faTag').definition,
   require('@fortawesome/free-solid-svg-icons/faHome').definition,
   require('@fortawesome/free-solid-svg-icons/faUser').definition,
+  require('@fortawesome/free-solid-svg-icons/faComments').definition,
 )
 
 export default {

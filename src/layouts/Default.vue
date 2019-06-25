@@ -125,6 +125,7 @@ body {
 
         a {
           color: $white;
+          text-decoration: none;
 
           &:hover {
             color: $yellow-base
