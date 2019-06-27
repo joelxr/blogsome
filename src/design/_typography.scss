@@ -298,7 +298,8 @@ $typography-type-scale: (
   1: $typography-base-font-size,
   2: $typography-base-font-size * 1.25,
   3: $typography-base-font-size * 1.5,
-  4: $typography-base-font-size * 1.75
+  4: $typography-base-font-size * 1.75,
+  5: $typography-base-font-size * 2.4
 );
 
 @function typography-type-scale($level) {
@@ -317,7 +318,8 @@ $typography-type-scale-contrast: (
   1: $typography-base-font-size * 1.25,
   2: $typography-base-font-size * 1.5,
   3: $typography-base-font-size * 1.75,
-  4: $typography-base-font-size * 3.2
+  4: $typography-base-font-size * 3.2,
+  5: $typography-base-font-size * 5
 );
 
 @function typography-type-scale-contrast($level) {
@@ -338,7 +340,8 @@ $typography-line-heights: (
   1: $typography-base-line-height * 1.5,
   2: $typography-base-line-height * 1.5,
   3: $typography-base-line-height * 1.5,
-  4: $typography-base-line-height * 3.4
+  4: $typography-base-line-height * 3.4,
+  5: $typography-base-line-height * 4.2
 );
 
 @function typography-line-height($level) {
@@ -355,11 +358,12 @@ $typography-base-line-height-contrast: $typography-base-line-height;
 
 $typography-line-heights-contrast: (
   -1: $typography-base-line-height-contrast,
-  0: $typography-base-line-height-contrast * 1.4,
-  1: $typography-base-line-height-contrast * 1.4,
-  2: $typography-base-line-height-contrast * 1.8,
-  3: $typography-base-line-height * 2.2,
-  4: $typography-base-line-height * 3.4
+  0: $typography-base-line-height-contrast * 2,
+  1: $typography-base-line-height-contrast * 2.2,
+  2: $typography-base-line-height-contrast * 2.4,
+  3: $typography-base-line-height * 2.8,
+  4: $typography-base-line-height * 3.6,
+  5: $typography-base-line-height * 4,
 );
 
 @function typography-line-height-contrast($level) {
@@ -390,37 +394,43 @@ $typography-line-heights-contrast: (
   );
 }
 
-%typography-post-title {
+%typography-7 {
+  @include typography-got-rhythm(5);
+
+  @extend %font-content;
+}
+
+%typography-6 {
   @include typography-got-rhythm(4);
 
   @extend %font-heading;
 }
 
-%typography-xxlarge {
+%typography-5 {
   @include typography-got-rhythm(3);
 
   @extend %font-heading;
 }
 
-%typography-xlarge {
+%typography-4 {
   @include typography-got-rhythm(2);
 
-  @extend %font-heading;
+  @extend %font-content;
 }
 
-%typography-large {
+%typography-3 {
   @include typography-got-rhythm(1);
 
   @extend %font-content;
 }
 
-%typography-medium {
+%typography-2 {
   @include typography-got-rhythm(0);
 
   @extend %font-content;
 }
 
-%typography-small {
+%typography-1 {
   @include typography-got-rhythm(-1);
 
   @extend %font-content;

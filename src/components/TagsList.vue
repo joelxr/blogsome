@@ -53,13 +53,14 @@ export default {
   padding: .559rem;
 
   .title {
+    margin-left: .5rem;
     text-align: left;
     padding-bottom: 1rem;
     cursor: pointer;
     user-select: none;
 
     span {
-      @extend %typography-xlarge;
+      @extend %typography-4;
 
       margin-left: 1rem;
     }

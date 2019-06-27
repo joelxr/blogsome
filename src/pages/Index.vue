@@ -39,7 +39,7 @@ query Post($page: Int){
         title
         subtitle
         path
-        date (format: "DD/MM/YYYY hh:mm")
+        date (format: "DD/MM/YYYY")
         timeToRead
         tags {
           id
@@ -67,7 +67,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: "Joel Rocha"
+    title: "Home"
   }
 };
 </script>
@@ -91,7 +91,7 @@ export default {
     align-items: center;
 
     .pageInfo {
-      @extend %typography-xlarge;
+      @extend %typography-4;
 
       color: $green-dark;
       padding: .6rem .6rem;
@@ -101,7 +101,7 @@ export default {
     }
 
     .pageLink {
-      @extend %typography-large;
+      @extend %typography-3;
 
       text-decoration: none;
       color: $white;

@@ -76,7 +76,7 @@ export default {
 }
 
 body {
-  @extend %typography-medium;
+  @extend %typography-2;
   
   height: 100vh;
   color: $black;
@@ -111,7 +111,7 @@ body {
         background-color: $blue-darkest;
 
         .name {
-          @extend %typography-xlarge;
+          @extend %typography-4;
       
           text-align: center;
           margin-bottom: 1rem;
@@ -119,6 +119,7 @@ body {
       }
 
       .menu {
+        margin-left: .5rem;
         padding: .559rem;
         text-align: left;
         user-select: none;
@@ -133,7 +134,7 @@ body {
         }
 
         span {
-          @extend %typography-xlarge;
+          @extend %typography-4;
 
           margin-left: 1rem;
         }
@@ -146,7 +147,7 @@ body {
   }
 
   .footer {
-    @extend %typography-medium;
+    @extend %typography-2;
 
     display: flex;
     justify-content: space-between;
@@ -155,7 +156,7 @@ body {
     background-color: $blue-lightest;
 
     .left {
-      @extend %typography-xxlarge;
+      @extend %typography-5;
 
       a {
         margin: 0 .4rem;

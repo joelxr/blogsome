@@ -21,7 +21,7 @@ query Tag ($id: String!) {
             title
             subtitle
             path
-            date (format: "DD/MM/YYYY hh:mm")
+            date (format: "DD/MM/YYYY")
             timeToRead
             content
             tags {
@@ -49,7 +49,7 @@ export default {
 @import '~/design/index.scss';
 
 .title {
-  @extend %typography-xxlarge;
+  @extend %typography-5;
 
   padding: 1rem;
   font-family: 'Hack', 'Courier New', Courier, monospace

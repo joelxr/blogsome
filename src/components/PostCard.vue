@@ -1,24 +1,30 @@
 <template>
   <div :class="$style.card">
-    <div :class="$style.date">
-      {{ post.date }}
-    </div>
-    <div :class="$style.title">
-      <g-link :to="post.path">
-        {{ post.title }}
-      </g-link>
-      <div :class="$style.subtitle">{{ post.subtitle }} </div>
+    <div :class="$style.left">
+      <div :class="$style.date">
+        {{ post.date }}
+      </div>
       <div :class="$style.timeToRead">
-        Reading time: {{ post.timeToRead }} min
+          {{ post.timeToRead }} min. to read
       </div>
     </div>
-    <div :class="$style.tags">
-      <Tag
-        v-for="tag in post.tags"
-        :key="tag.id"
-        :to="`/tag/${tag.id}`"
-        :title="tag.id"
-      />
+    <div :class="$style.right">
+      <div :class="$style.title">
+        <g-link :to="post.path">
+          {{ post.title }}
+        </g-link>
+      </div>
+      <div :class="$style.subtitle">
+        {{ post.subtitle }}
+      </div>
+      <div :class="$style.tags">
+        <Tag
+          v-for="tag in post.tags"
+          :key="tag.id"
+          :to="`/tag/${tag.id}`"
+          :title="tag.id"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -43,10 +49,9 @@ export default {
 
 .card {
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-columns: 1fr 4fr;
   grid-gap: 0.6rem;
-  padding: 1rem 2rem 2.1rem 1rem;
-  color: $black;
+  margin: .8rem;
   background-color: $gray-lighter;
   border-radius: 6px;
   box-shadow: 0 0.5px 1px rgba(0,0,0,0.12),
@@ -58,50 +63,73 @@ export default {
                 0 2px 3px rgba(0,0,0,0.12);
   }
 
-  .date {
-    @extend %typography-xlarge;
+  .left {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-light;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 
-    color: $gray-darker;
-    align-self: center;
+    box-shadow: 0 0.5px 1px rgba(0,0,0,0.12),
+              0 0.5px 1px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+      box-shadow: 0 2px 3px rgba(0,0,0,0.15),
+                0 2px 3px rgba(0,0,0,0.12);
+    }
+
+    .date {
+      @extend %typography-5;
+
+      color: $black;
+      align-self: center;
+    }
+
+    .timeToRead {
+      @extend %typography-3;
+
+      padding: 0 .5rem;
+      color: $blue-dark;
+    }
   }
 
-  .title {
-    @extend %typography-xxlarge;
+  .right {
+    padding: 1rem;
 
-    justify-self: flex-start;
-    
-    a {
-      color: $black;
-      text-decoration: none;
-      padding: 0 .5rem;
+    .title {
+      @extend %typography-5;
 
-      &:hover {
-        background-color: $yellow-base; 
-        border-radius: 4px;
+      justify-self: flex-start;
+      
+      a {
+        color: $blue-base;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $yellow-base; 
+          border-radius: 4px;
+        }
       }
     }
 
     .subtitle {
-      @extend %typography-medium;
+      @extend %typography-3;
 
       color: $black;
       margin: 0;
-      padding: 0 .5rem;
     }
-  }
 
-  .timeToRead {
-    @extend %typography-small;
+    .tags {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-items: center;
 
-    padding: 0 .5rem;
-    color: $blue-base;
-  }
-
-  .tags {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-items: center;
+      margin: 0 -0.6rem;
+    }
   }
 }
 </style>

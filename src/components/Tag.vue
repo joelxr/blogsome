@@ -25,7 +25,7 @@ export default {
 @import '~/design/index.scss';
 
 .tag {
-  @extend %typography-small;
+  @extend %typography-1;
 
   padding: .2rem .4rem;
   margin: .4rem;

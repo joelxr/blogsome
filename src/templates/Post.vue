@@ -20,7 +20,7 @@
           />
         </div>
       </div>
-      <div>
+      <div :class="$style.contentWrapper">
         <div
           :class="$style.content"
           v-html="$page.post.content" />
@@ -85,8 +85,7 @@ query Post ($path: String!) {
 
 .post {
   .cover {
-    height: 11.655rem;
-    padding: 2rem 1rem;
+    padding: 1.38rem 2rem;
     border-radius: 8px;
     color: $black;
     background: $gray-lighter;
@@ -94,13 +93,13 @@ query Post ($path: String!) {
     background: linear-gradient(to right, $gray-lighter, $gray-light);
 
     .title {
-      @extend %typography-post-title;
+      @extend %typography-6;
 
       font-weight: bolder;
     }
 
     .dateTime {
-      @extend %typography-large;
+      @extend %typography-3;
     }
 
     .timeToRead {
@@ -120,10 +119,28 @@ query Post ($path: String!) {
     }
   }
 
-  .content {
-    @extend %typography-large;
-
+  .contentWrapper {
+    width: 100%;
     padding: 1rem;
+
+    .content {
+      @extend %typography-4;
+
+      width: 60vw;
+      margin: 0 auto;
+      text-align: justify;
+
+      p:first-child:first-letter {
+        @extend %typography-7;
+
+        background-color: $gray-darker;
+        color: $white;
+        padding: 1.2rem;
+        float: left;
+        margin: .6rem .2em 0 0;
+        border-radius: 6px;
+      }
+    }
   }
 
   .commentsButtonWrapper {
@@ -132,7 +149,7 @@ query Post ($path: String!) {
     margin-right: 1rem;
 
     .commentsButton {
-      @extend %typography-large;
+      @extend %typography-3;
 
       color: $white;
       outline: none;

@@ -11,7 +11,7 @@
 @import '~/design/index.scss';
 
 .title {
-  @extend %typography-xxlarge;  
+  @extend %typography-5;  
   
   padding: 1rem;
 }
