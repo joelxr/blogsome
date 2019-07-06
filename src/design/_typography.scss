@@ -299,7 +299,7 @@ $typography-type-scale: (
   2: $typography-base-font-size * 1.25,
   3: $typography-base-font-size * 1.5,
   4: $typography-base-font-size * 1.75,
-  5: $typography-base-font-size * 2.4
+  5: $typography-base-font-size * 2.2
 );
 
 @function typography-type-scale($level) {
@@ -319,7 +319,7 @@ $typography-type-scale-contrast: (
   2: $typography-base-font-size * 1.5,
   3: $typography-base-font-size * 1.75,
   4: $typography-base-font-size * 3.2,
-  5: $typography-base-font-size * 5
+  5: $typography-base-font-size * 4
 );
 
 @function typography-type-scale-contrast($level) {
@@ -341,7 +341,7 @@ $typography-line-heights: (
   2: $typography-base-line-height * 1.5,
   3: $typography-base-line-height * 1.5,
   4: $typography-base-line-height * 3.4,
-  5: $typography-base-line-height * 4.2
+  5: $typography-base-line-height * 4
 );
 
 @function typography-line-height($level) {

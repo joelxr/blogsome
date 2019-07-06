@@ -128,7 +128,7 @@ query Post ($path: String!) {
 
       width: 60vw;
       margin: 0 auto;
-      text-align: justify;
+      text-align: left;
 
       p:first-child:first-letter {
         @extend %typography-7;
@@ -197,6 +197,16 @@ query Post ($path: String!) {
 
   .comments {
     padding: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .post {
+    .contentWrapper {
+      .content {
+        width: 90vw;
+      }
+    }
   }
 }
 </style>

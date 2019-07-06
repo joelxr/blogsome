@@ -132,4 +132,20 @@ export default {
     }
   }
 }
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: auto;
+    grid-gap: 0.2rem;
+
+    .left {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: .4rem 1rem;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
 </style>

@@ -3,22 +3,28 @@
     <aside :class="$style.aside">
       <div :class="$style.content">
         <div :class="$style.author">
-          <Avatar />
+          <div :class="$style.avatar">
+            <Avatar />
+          </div>
           <div :class="$style.name">{{ author }}</div>
         </div>
-        <div :class="$style.menu">
-          <g-link :to="'/'">
-            <Icon :name="['fas', 'home']" size="sm" />
-            <span>Home</span>
-          </g-link>
+        <div :class="$style.menuWrapper">
+          <div :class="$style.menu">
+            <g-link :class="$style.menuItem" :to="'/'">
+              <Icon :name="['fas', 'home']" size="sm" />
+              <span>Home</span>
+            </g-link>
+          </div>
+          <div :class="$style.menu">
+            <a :class="$style.menuItem" target="blank" href="http://joelxr.github.io/">
+              <Icon :name="['fas', 'user']" size="sm" />
+              <span>About</span>
+            </a>
+          </div>
         </div>
-        <div :class="$style.menu">
-          <a target="blank" href="http://joelxr.github.io/">
-            <Icon :name="['fas', 'user']" size="sm" />
-            <span>About</span>
-          </a>
+        <div :class="$style.tagsWrapper">
+          <TagsList />
         </div>
-        <TagsList />
       </div>
     </aside>
     <main :class="$style.main">
@@ -112,9 +118,8 @@ body {
 
         .name {
           @extend %typography-4;
-      
-          text-align: center;
-          margin-bottom: 1rem;
+
+          margin: 0.4rem 0;
         }
       }
 
@@ -165,6 +170,37 @@ body {
         &:hover {
           color: $blue-base;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 11fr 1fr;
+
+    .aside {
+      grid-row: 1;
+
+      .author {
+        .avatar {
+          display: none;
+        }
+      }
+
+      .menuWrapper {
+        display: flex;
+
+        .menuItem {
+          display: flex;
+          justify-content: center;
+          align-items: center
+        }
+      }
+
+      .tagsWrapper {
+        display: none;
       }
     }
   }
