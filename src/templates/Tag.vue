@@ -21,7 +21,7 @@ query Tag ($id: String!) {
             title
             subtitle
             path
-            date (format: "DD/MM/YYYY")
+            date (format: "DD/MM/YYYY ")
             timeToRead
             content
             tags {
