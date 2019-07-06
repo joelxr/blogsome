@@ -146,7 +146,9 @@ query Post ($path: String!) {
   .commentsButtonWrapper {
     display: flex;
     justify-content: flex-end;
-    margin-right: 1rem;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 1rem;
 
     .commentsButton {
       @extend %typography-3;
