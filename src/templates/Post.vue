@@ -130,7 +130,7 @@ query Post ($path: String!) {
       margin: 0 auto;
       text-align: left;
 
-      p:first-child:first-letter {
+      > p:first-of-type::first-letter {
         @extend %typography-7;
 
         background-color: $gray-darker;
@@ -139,6 +139,10 @@ query Post ($path: String!) {
         float: left;
         margin: .6rem .2em 0 0;
         border-radius: 6px;
+      }
+
+      li p {
+        margin: 0
       }
     }
   }
