@@ -8609,10 +8609,10 @@ vm-browserify@^1.0.1:
   resolved "http://verdaccio.cardea.com.br/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-vue-analytics@^5.17.0:
-  version "5.17.0"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.0.tgz#c9530b82b9b4acd111c9cba7d249adf4089746b3"
-  integrity sha512-1Cn/v06cGjmGDfRlG2hc0RF0sc2rNC88shOeLGNIlllSFv5GDZ9kLXGTPB9z9I+WyvFewyUONPIdQnpOls6h6w==
+vue-analytics@5.17.x:
+  version "5.17.5"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.5.tgz#4c03806755132801d4469e220cbf82353c2252db"
+  integrity sha512-BIrnsHy4nf82htNofSnm4B2SaWNlDDmBZsCq0YhSdWLk203qSXBD+z1RrGrE9KAH7YcbH9HE+aBCV9eXWBC02g==
 
 vue-disqus@3.0.x:
   version "3.0.5"
@@ -8862,9 +8862,9 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "http://verdaccio.cardea.com.br/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 y18n@^4.0.0:
   version "4.0.0"
