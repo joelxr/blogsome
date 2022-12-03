@@ -2593,9 +2593,9 @@ decamelize@^1.1.1, decamelize@^1.1.2:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "http://verdaccio.cardea.com.br/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^3.2.0, decompress-response@^3.3.0:
   version "3.3.0"
@@ -8609,10 +8609,10 @@ vm-browserify@^1.0.1:
   resolved "http://verdaccio.cardea.com.br/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-vue-analytics@^5.17.0:
-  version "5.17.0"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.0.tgz#c9530b82b9b4acd111c9cba7d249adf4089746b3"
-  integrity sha512-1Cn/v06cGjmGDfRlG2hc0RF0sc2rNC88shOeLGNIlllSFv5GDZ9kLXGTPB9z9I+WyvFewyUONPIdQnpOls6h6w==
+vue-analytics@5.17.x:
+  version "5.17.5"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.5.tgz#4c03806755132801d4469e220cbf82353c2252db"
+  integrity sha512-BIrnsHy4nf82htNofSnm4B2SaWNlDDmBZsCq0YhSdWLk203qSXBD+z1RrGrE9KAH7YcbH9HE+aBCV9eXWBC02g==
 
 vue-disqus@3.0.x:
   version "3.0.5"
